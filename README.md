@@ -25,9 +25,12 @@ Histogram matrisleri:
 Kolerasyon matrisi: 
 
 Sıcaklık Değişkenleri Arasındaki İlişki: min_c, ort_c ve mak_c gibi sıcaklık değişkenleri arasında çok yüksek bir korelasyon gözlemleniyor. Bu beklenen bir durum, çünkü minimum, ortalama ve maksimum sıcaklıklar genellikle benzer şekilde değişir ve birlikte hareket ederler.
+
 Sıcaklık ile Zaman Arasındaki İlişki: Sıcaklık değişkenleri ile saat arasındaki ilişki de dikkat çekiyor. Bu, günün farklı saatlerinde sıcaklıkların farklı şekilde değiştiği anlamına geliyor. Yani sabah, öğle ve akşam saatlerinde sıcaklıklar değişiklik gösteriyor.
+
 Nem ve Basınç Arasındaki İlişki: Nem ile hava basıncı (hPa) arasında negatif bir korelasyon var. Bu da, nemin artmasıyla hava basıncının genellikle azaldığını gösteriyor, bu meteorolojide bilinen bir ilişki.
 Diğer Değişkenler: Diğer değişkenler arasında da bazı korelasyonlar görülüyor ama bunlar, sıcaklık ve zaman arasındaki ilişki kadar güçlü değil.
+
 
 ![image](https://github.com/user-attachments/assets/9f8fcfb9-49f0-4f1c-91f4-9344189a8279)
 
