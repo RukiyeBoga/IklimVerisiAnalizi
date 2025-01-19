@@ -7,12 +7,18 @@ Veriyi anlamak için çeşitli histogramlar ve korelasyon matrisleri oluşturulm
 
 Histogram matrisleri:
 
-•  Sıcaklık Değerleri: Minimum, ortalama ve maksimum sıcaklık değerlerinin dağılımları benzer bir eğilim göstermektedir. Sıcaklıkların belirli bir aralıkta yoğunlaştığı ve bu aralığın dışında daha az veri olduğu görülmektedir. 
+•  Sıcaklık Değerleri: Minimum, ortalama ve maksimum sıcaklık değerlerinin dağılımları benzer bir eğilim göstermektedir. Sıcaklıkların belirli bir aralıkta yoğunlaştığı ve bu aralığın dışında daha az veri olduğu görülmektedir.
+
 •  Yağış (msn): Yağış miktarının büyük bir kısmının sıfır civarında olduğu, yani yağışlı günlerin daha az olduğu anlaşılmaktadır. 
+
 •  Nem: Nem değerlerinin de belirli bir aralıkta yoğunlaştığı ve bu aralığın dışında daha az veri olduğu görülmektedir. 
+
 •  Basınç (hPa): Basınç değerleri de sıcaklık değerleri gibi belirli bir aralıkta yoğunlaşmaktadır. 
+
 •  Saat: Saat verisinin dağılımı, günün farklı saatlerindeki ölçümlerin sayısını göstermektedir. 
+
 •  Rüzgar Hızı (kws): Rüzgar hızının düşük olduğu günlerin daha fazla olduğu anlaşılmaktadır. 
+
 
 ![image](https://github.com/user-attachments/assets/e3275f00-6f04-41e3-aac0-482022b34fad)
 
@@ -26,11 +32,14 @@ Diğer Değişkenler: Diğer değişkenler arasında da bazı korelasyonlar gör
 ![image](https://github.com/user-attachments/assets/9f8fcfb9-49f0-4f1c-91f4-9344189a8279)
 
 # Makine Öğrenmesi Algoritmaları: 
+
 Lineer Regresyon: 
+
 Model, verilen verilerden elde edilen özellikleri kullanarak, örnek bir veri seti için 9.91°C tahmininde bulunmuştur. Bu sonuç, modelin sıcaklık tahminleri üzerinde yaptığı hesaplamanın bir örneğidir. R² skoru ise 0.68'dir; bu, modelin verilerdeki değişkenliğin %68'ini doğru bir şekilde açıkladığını gösterir. Ancak, %32'lik kısım model tarafından açıklanamayarak hataya yol açmaktadır. Modelin doğruluğunu artırmak amacıyla daha kapsamlı veri setleri ve farklı regresyon yöntemleri ile iyileştirmeler yapılabilir.
 ![image](https://github.com/user-attachments/assets/8f121919-d1eb-4801-b7ea-c06de266ff32)
 
 Karar Ağacı:
+
 Model, veri seti üzerinde eğitim alarak test verileri üzerinden tahminler yapmıştır. Ortalama Kare Hata (MSE) değeri 9.88 olarak hesaplanmıştır. Bu değer, modelin tahminlerinin gerçek sıcaklık değerlerinden ortalama sapmasını gösterir. MSE'nin düşük olması, modelin tahminlerinin gerçek değerlere yakın olduğunu belirtir, ancak daha da düşük bir MSE değeri modelin daha doğru tahminler yaptığını gösterir.
 Modelin görselleştirilmesi de yapılmış ve karar ağacının yapısı analiz edilmiştir. Karar ağacında, sıcaklık tahminlerinde en etkili olan değişkenler yıl, nem, basınç (hPa) gibi faktörlerdir. Bu, sıcaklık tahmininde bu özelliklerin önemli bir rol oynadığını ortaya koymaktadır.
 
@@ -42,6 +51,7 @@ Karar ağacı görsel şekli:
 ![image](https://github.com/user-attachments/assets/9c39ef9d-5227-4b0e-bd4f-9ee05491a0d6)
 
 Random Forest: 
+
 Model, veri setini öğrenerek test verileri üzerinde tahminler yapmıştır. Ortalama Kare Hata (MSE) değeri 1.89 olarak hesaplanmıştır. Bu düşük MSE değeri, modelin oldukça doğru tahminler yaptığını göstermektedir. Daha düşük bir MSE, modelin tahminlerinin gerçek verilere daha yakın olduğunu ve modelin genel olarak daha başarılı olduğunu ifade eder.
 
 ![image](https://github.com/user-attachments/assets/0bd7927c-6276-4374-b893-b146af593871)
@@ -52,6 +62,7 @@ Yeni bir veri örneği kullanılarak yapılan tahmin sonucu 10.69°C olarak bulu
 ![image](https://github.com/user-attachments/assets/d9237190-8d8d-45b0-b6b7-a73ef197ccc3)
 
 # Sonuç Analizi:
+
 Bu çalışmada, ortalama sıcaklık tahminleri yapmak için üç farklı makine öğrenimi modeli kullanılmıştır: Doğrusal Regresyon, Karar Ağacı ve Random Forest. Her modelin performansı değerlendirildiğinde, doğrusal regresyonun genel olarak yeterli sonuçlar verdiği ancak daha karmaşık ilişkilerde sınırlı kaldığı görülmüştür. Doğrusal Regresyon modeli, MSE değeri 9.91 ile belirli bir doğruluk sağlamış olsa da, gerçek dünyadaki verilerin doğrusal ilişkilerden ziyade daha karmaşık yapılar içerdiği göz önüne alındığında, daha esnek modellere ihtiyaç duyulmaktadır.
 
 Karar Ağacı modeli, daha esnek bir yaklaşım sunduğundan, verilerdeki doğrusal olmayan ilişkileri daha iyi modellemiştir. Bununla birlikte, karar ağacının MSE değeri 9.88 olarak doğrusal regresyona oldukça yakın kalmış ve modelin karmaşıklığından tam anlamıyla faydalanılmamış gibi görünmüştür. Karar ağaçları genellikle çok güçlü sonuçlar verse de, derin ağaçların aşırı uyum yapma riski vardır, bu da genel performansı sınırlayabilir.
