@@ -74,8 +74,8 @@ En yüksek başarıyı ise Random Forest modeli göstermiştir. Random Forest, b
 Genel olarak, bu üç modelin karşılaştırılması, doğrusal regresyonun yalnızca basit veri yapıları için uygun olduğunu ve daha karmaşık veriler için daha gelişmiş modellerin tercih edilmesi gerektiğini ortaya koymaktadır. Karar ağacı ve Random Forest gibi ansambl yöntemler, doğrusal olmayan ilişkileri daha iyi modelleyebilirken, özellikle Random Forest, doğruluk açısından en iyi sonuçları sağlayarak bu çalışmada en uygun model olarak öne çıkmıştır. Bu sonuçlar, veri biliminde ve iklim analizi gibi karmaşık veri setlerinde doğru tahminler yapmak için ansambl yöntemlerinin ve güçlü modellerin önemini vurgulamaktadır.
 
 
-
-
+# Youtube linki
+https://www.youtube.com/watch?v=fuAmiOgemYo
 
 
 
